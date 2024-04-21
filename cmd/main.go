@@ -11,13 +11,13 @@ import (
 
 func main() {
 	db, err := db2.NewMYSQLStorage(mysql.Config{
-		User:                    config.Envs.DBUser,
-		Passwd:                  config.Envs.DBPassword,
-		Addr:                    config.Envs.DBAddress,
-		DBName:                  config.Envs.DBName,
-		Net:                     "tcp",
-		AllowCleartextPasswords: true,
-		ParseTime:               true,
+		User:                 config.Envs.DBUser,
+		Passwd:               config.Envs.DBPassword,
+		Addr:                 config.Envs.DBAddress,
+		DBName:               config.Envs.DBName,
+		Net:                  "tcp",
+		AllowNativePasswords: true,
+		ParseTime:            true,
 	})
 
 	if err != nil {
